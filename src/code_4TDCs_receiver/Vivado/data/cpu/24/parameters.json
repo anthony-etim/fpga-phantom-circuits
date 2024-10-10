@@ -1,0 +1,19 @@
+{
+    "trig_bit": 18,
+    "measurements": 1200,
+    "repetitions": 1,
+    "mask": 1,
+    "pattern": [
+        0,
+        1,
+        1,
+        0
+    ],
+    "outdir": "measurements/cpu/24/",
+    "cpu_cores": 24,
+    "sleep": 3,
+    "transmitter_mask": 65535,
+    "trans_trig_bit": null,
+    "sleep_time": 5,
+    "heater_no": 8
+}

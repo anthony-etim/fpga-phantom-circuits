@@ -1,0 +1,11 @@
+../../util/clog2.v
+../../util/power2.v
+../../uart/txuart.v
+../../uart/rxuart.v
+../../counter/counter.sv
+./defines.sv
+../../transmitter/transmitter.sv
+../../receiver/receiver.sv
+../../receiver/ro_defines.sv
+../../receiver/ring_oscillator.sv
+../verilog/phantom_circuits_top.sv

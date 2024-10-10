@@ -1,0 +1,146 @@
+Varying GPU load
+Communicating with {'measurements': 1500, 'repetitions': 1, 'pattern': [1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 1, 0], 'outdir': 'measurements/gpu/1/', 'cpu_cores': -1, 'sleep': 3}
+Transmitting 1 as the 1/16 bit and sleeping for 3
+Stressing with GPU
+Repetition 1/1 for 1/16 bit = 1
+The RO heater enable value is   11111111
+Setting up 4 TDCs from FPGA
+[[139. 143. 141. ... 143. 253. 253.]
+ [124. 127. 127. ... 127. 253. 253.]
+ [125. 127. 127. ... 129. 253. 253.]
+ [182. 188. 188. ... 188. 253. 253.]] (4, 1502)
+Average :  [146.294      129.01733333 130.946      188.946     ]
+Transmitting 0 as the 2/16 bit and sleeping for 3
+Repetition 1/1 for 2/16 bit = 0
+Setting up 4 TDCs from FPGA
+[[121. 123. 123. ... 125. 253. 253.]
+ [104. 106. 107. ... 108. 253. 253.]
+ [105. 107. 107. ... 108. 253. 253.]
+ [164. 165. 165. ... 167. 253. 253.]] (4, 1502)
+Average :  [125.818      109.12866667 109.57066667 167.66933333]
+Transmitting 0 as the 3/16 bit and sleeping for 3
+Repetition 1/1 for 3/16 bit = 0
+Setting up 4 TDCs from FPGA
+[[121. 123. 123. ... 125. 253. 253.]
+ [104. 106. 107. ... 109. 253. 253.]
+ [106. 107. 107. ... 110. 253. 253.]
+ [164. 165. 165. ... 168. 253. 253.]] (4, 1502)
+Average :  [126.156      109.52866667 109.96266667 167.93266667]
+Transmitting 1 as the 4/16 bit and sleeping for 3
+Stressing with GPU
+Repetition 1/1 for 4/16 bit = 1
+The RO heater enable value is   11111111
+Setting up 4 TDCs from FPGA
+[[143. 145. 145. ... 148. 253. 253.]
+ [127. 129. 129. ... 129. 253. 253.]
+ [129. 130. 131. ... 132. 253. 253.]
+ [188. 189. 189. ... 189. 253. 253.]] (4, 1502)
+Average :  [146.264      129.07133333 130.96333333 189.00733333]
+Transmitting 1 as the 5/16 bit and sleeping for 3
+Stressing with GPU
+Repetition 1/1 for 5/16 bit = 1
+The RO heater enable value is   11111111
+Setting up 4 TDCs from FPGA
+[[143. 145. 148. ... 151. 253. 253.]
+ [127. 129. 129. ... 131. 253. 253.]
+ [128. 130. 130. ... 133. 253. 253.]
+ [188. 189. 189. ... 189. 253. 253.]] (4, 1502)
+Average :  [146.52533333 129.034      131.03266667 189.01666667]
+Transmitting 0 as the 6/16 bit and sleeping for 3
+Repetition 1/1 for 6/16 bit = 0
+Setting up 4 TDCs from FPGA
+[[123. 125. 125. ... 127. 253. 253.]
+ [107. 108. 108. ... 108. 253. 253.]
+ [107. 108. 108. ... 108. 253. 253.]
+ [165. 168. 168. ... 168. 253. 253.]] (4, 1502)
+Average :  [126.016      109.18266667 109.65333333 167.764     ]
+Transmitting 0 as the 7/16 bit and sleeping for 3
+Repetition 1/1 for 7/16 bit = 0
+Setting up 4 TDCs from FPGA
+[[122. 124. 125. ... 123. 253. 253.]
+ [106. 107. 107. ... 106. 253. 253.]
+ [106. 107. 108. ... 107. 253. 253.]
+ [165. 165. 166. ... 165. 253. 253.]] (4, 1502)
+Average :  [125.92533333 109.136      109.65066667 167.66266667]
+Transmitting 1 as the 8/16 bit and sleeping for 3
+Stressing with GPU
+Repetition 1/1 for 8/16 bit = 1
+The RO heater enable value is   11111111
+Setting up 4 TDCs from FPGA
+[[141. 144. 145. ... 148. 253. 253.]
+ [126. 127. 128. ... 131. 253. 253.]
+ [127. 129. 130. ... 132. 253. 253.]
+ [185. 189. 189. ... 189. 253. 253.]] (4, 1502)
+Average :  [146.47133333 129.20866667 131.11       189.06266667]
+Transmitting 1 as the 9/16 bit and sleeping for 3
+Stressing with GPU
+Repetition 1/1 for 9/16 bit = 1
+The RO heater enable value is   11111111
+Setting up 4 TDCs from FPGA
+[[143. 148. 148. ... 148. 253. 253.]
+ [127. 129. 129. ... 129. 253. 253.]
+ [129. 131. 131. ... 131. 253. 253.]
+ [188. 189. 189. ... 189. 253. 253.]] (4, 1502)
+Average :  [146.42533333 128.99933333 131.002      189.012     ]
+Transmitting 0 as the 10/16 bit and sleeping for 3
+Repetition 1/1 for 10/16 bit = 0
+Setting up 4 TDCs from FPGA
+[[120. 121. 121. ... 127. 253. 253.]
+ [102. 104. 104. ... 109. 253. 253.]
+ [104. 106. 106. ... 111. 253. 253.]
+ [162. 164. 165. ... 168. 253. 253.]] (4, 1502)
+Average :  [125.792      108.88       109.51266667 167.64      ]
+Transmitting 0 as the 11/16 bit and sleeping for 3
+Repetition 1/1 for 11/16 bit = 0
+Setting up 4 TDCs from FPGA
+[[120. 122. 123. ... 129. 253. 253.]
+ [103. 104. 106. ... 112. 253. 253.]
+ [105. 106. 106. ... 112. 253. 253.]
+ [163. 165. 165. ... 171. 253. 253.]] (4, 1502)
+Average :  [126.20133333 109.44266667 109.88466667 168.06533333]
+Transmitting 1 as the 12/16 bit and sleeping for 3
+Stressing with GPU
+Repetition 1/1 for 12/16 bit = 1
+The RO heater enable value is   11111111
+Setting up 4 TDCs from FPGA
+[[141. 143. 143. ... 143. 253. 253.]
+ [125. 127. 127. ... 127. 253. 253.]
+ [127. 128. 127. ... 129. 253. 253.]
+ [184. 188. 188. ... 188. 253. 253.]] (4, 1502)
+Average :  [146.438      129.12866667 131.09133333 189.04133333]
+Transmitting 1 as the 13/16 bit and sleeping for 3
+Stressing with GPU
+Repetition 1/1 for 13/16 bit = 1
+The RO heater enable value is   11111111
+Setting up 4 TDCs from FPGA
+[[140. 143. 143. ... 145. 253. 253.]
+ [125. 127. 127. ... 128. 253. 253.]
+ [126. 129. 128. ... 130. 253. 253.]
+ [184. 188. 188. ... 189. 253. 253.]] (4, 1502)
+Average :  [146.40933333 128.91533333 131.014      188.97933333]
+Transmitting 0 as the 14/16 bit and sleeping for 3
+Repetition 1/1 for 14/16 bit = 0
+Setting up 4 TDCs from FPGA
+[[123. 125. 125. ... 125. 253. 253.]
+ [106. 108. 109. ... 107. 253. 253.]
+ [107. 108. 109. ... 108. 253. 253.]
+ [165. 167. 168. ... 166. 253. 253.]] (4, 1502)
+Average :  [125.932      109.11066667 109.64133333 167.75866667]
+Transmitting 1 as the 15/16 bit and sleeping for 3
+Stressing with GPU
+Repetition 1/1 for 15/16 bit = 1
+The RO heater enable value is   11111111
+Setting up 4 TDCs from FPGA
+[[143. 145. 145. ... 143. 253. 253.]
+ [127. 128. 127. ... 127. 253. 253.]
+ [129. 130. 130. ... 129. 253. 253.]
+ [188. 189. 189. ... 188. 253. 253.]] (4, 1502)
+Average :  [146.448 129.052 131.018 189.036]
+Transmitting 0 as the 16/16 bit and sleeping for 3
+Repetition 1/1 for 16/16 bit = 0
+Setting up 4 TDCs from FPGA
+[[121. 125. 125. ... 127. 253. 253.]
+ [104. 108. 107. ... 109. 253. 253.]
+ [106. 108. 107. ... 111. 253. 253.]
+ [164. 166. 165. ... 168. 253. 253.]] (4, 1502)
+Average :  [125.76466667 108.86733333 109.394      167.492     ]

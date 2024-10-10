@@ -1,0 +1,15 @@
+# compile verilog design source files
+verilog work \
+"../../util/clog2.v" \
+"../../util/mem_dual_xilinx.v" \
+"../../transmitter/transmitter.sv" \
+"../../counter/counter.sv" \
+"../../receiver/dummyRO.sv" \
+"../../receiver/ro_defines.sv" \
+"../../receiver/receiver.sv" \
+"../top.sv" \
+"../tb_top.sv" \
+
+
+# Do not sort compile order
+nosort

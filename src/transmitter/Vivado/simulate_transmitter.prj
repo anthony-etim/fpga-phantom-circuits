@@ -1,0 +1,13 @@
+# compile verilog design source files
+verilog work \
+"../../util/clog2.v" \
+"../../util/mem_dual_xilinx.v" \
+
+sv work \
+"defines.sv" \
+"../transmitter.sv" \
+"../tb_transmitter.sv" \
+
+
+# Do not sort compile order
+nosort

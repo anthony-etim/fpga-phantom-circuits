@@ -1,0 +1,27 @@
+{
+    "measurements": 4001,
+    "pattern": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+    ],
+    "outdir": "measurements/fpga/1/",
+    "cpu_cores": null,
+    "sleep": 3,
+    "transmitter_mask": 65535,
+    "trans_trig_bit": null,
+    "heater_no": 1
+}

@@ -1,0 +1,220 @@
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source synthesize.tcl
+# set fileName [lindex $argv 0]
+# catch {set fptr [open $fileName r]} ;
+# set contents [read -nonewline $fptr] ;
+# close $fptr ;
+# set splitCont [split $contents "\n"] ;
+# foreach f $splitCont {
+#   puts $f
+#   read_verilog $f
+# }
+../build/ac701/src/clog2.v
+../build/ac701/src/txuart.v
+../build/ac701/src/rxuart.v
+../build/ac701/src/mem_dual.sv
+../build/ac701/src/fifo_mem.sv
+../build/ac701/src/counter.sv
+../build/ac701/src/defines.sv
+../build/ac701/src/address.sv
+../build/ac701/src/ro_defines.sv
+../build/ac701/src/ring_oscillator.sv
+../build/ac701/src/roSensor.sv
+../build/ac701/src/simple_transmitter.sv
+../build/ac701/src/phantum.sv
+../build/ac701/src/phantom_circuits_top.sv
+# set top_module [lindex $argv 1]
+# set partname [lindex $argv 2]
+# set xdcfile  [lindex $argv 3]
+# set board [lindex $argv 4]
+# set ipDir [lindex $argv 5]
+# puts "top_module $top_module" 
+top_module phantom_circuits_top
+# puts "partname $partname"
+partname xc7a200tfbg676
+# puts "xdcfile $xdcfile"
+xdcfile ../boards/ac701/ac701_rev2.0.xdc
+# puts "board $board"
+board ac701
+# puts "ipDir $ipDir"
+ipDir ../ip/xc7a200tfbg676
+# set_part $partname
+INFO: [Coretcl 2-1500] The part has been set to 'xc7a200tfbg676' for the current project only. Run set_part -help for more details. To evaluate different speed grades in the current design, use the set_speed_grade command, or use the open_checkpoint -part command to change the part used by an existing checkpoint design.
+# set_param general.maxThreads 8
+# update_compile_order -fileset sources_1
+# synth_design -part $partname -top $top_module
+Command: synth_design -part xc7a200tfbg676 -top phantom_circuits_top
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 13414 
+WARNING: [Synth 8-6901] identifier 'axi_read_flag' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:167]
+WARNING: [Synth 8-6901] identifier 'debug_counter' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:182]
+WARNING: [Synth 8-6901] identifier 'debug_phantum_state' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:182]
+WARNING: [Synth 8-6901] identifier 'fifo_data' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:184]
+WARNING: [Synth 8-6901] identifier 'axi_read_flag' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:184]
+WARNING: [Synth 8-6901] identifier 'fifo_data' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:185]
+WARNING: [Synth 8-6901] identifier 'axi_read_flag' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:185]
+WARNING: [Synth 8-6901] identifier 'fifo_data' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:186]
+WARNING: [Synth 8-6901] identifier 'axi_read_flag' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:186]
+WARNING: [Synth 8-6901] identifier 'fifo_data' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:187]
+WARNING: [Synth 8-6901] identifier 'axi_read_flag' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:187]
+WARNING: [Synth 8-6901] identifier 'sendbit' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:212]
+WARNING: [Synth 8-6901] identifier 'delayCycles' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:221]
+WARNING: [Synth 8-6901] identifier 'delayCycles' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:227]
+WARNING: [Synth 8-6901] identifier 'delayCycles' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:227]
+WARNING: [Synth 8-6901] identifier 'delayCycles' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:228]
+WARNING: [Synth 8-6901] identifier 'delayCycles_tx' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:240]
+WARNING: [Synth 8-6901] identifier 'delayCycles_tx' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:246]
+WARNING: [Synth 8-6901] identifier 'delayCycles_tx' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:246]
+WARNING: [Synth 8-6901] identifier 'delayCycles_tx' is used before its declaration [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:247]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1580.621 ; gain = 144.535 ; free physical = 32585 ; free virtual = 54190
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'phantom_circuits_top' [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:5]
+	Parameter CLK_SPEED bound to: 200000000 - type: integer 
+	Parameter BAUD_RATE bound to: 921600 - type: integer 
+	Parameter BIT_SIZE bound to: 8 - type: integer 
+	Parameter RO_TYPE bound to: 2 - type: integer 
+	Parameter STAGES bound to: 2 - type: integer 
+	Parameter INITIAL_SETUP bound to: 31'b0000101000000000000000011011001 
+	Parameter IDLE bound to: 5'b00000 
+	Parameter WAIT_RETURN bound to: 5'b00001 
+	Parameter SET_SW_RST bound to: 5'b00010 
+	Parameter SET_PHANTOM_START bound to: 5'b00011 
+	Parameter GET_32BITS_DATA bound to: 5'b00100 
+	Parameter SET_TX_WIRE_PHAN bound to: 5'b01010 
+	Parameter SET_DELAY_PHAN bound to: 5'b01011 
+	Parameter SET_DELAY_TX bound to: 5'b01100 
+	Parameter GET_DEBUG bound to: 5'b10100 
+	Parameter NUM_RO_COUNTER bound to: 4 - type: integer 
+	Parameter FIFO_READ_IDLE bound to: 3'b000 
+	Parameter FIFO_READ_1 bound to: 3'b001 
+	Parameter FIFO_READ_2 bound to: 3'b010 
+	Parameter FIFO_READ_WAIT bound to: 3'b011 
+	Parameter FIFOREADDELAY bound to: 3'b000 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:137]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:145]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:147]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:332]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:333]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:352]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:353]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:354]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:418]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:418]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:418]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:418]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32871]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (1#1) [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32871]
+INFO: [Synth 8-6157] synthesizing module 'txuart' [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/txuart.v:99]
+	Parameter INITIAL_SETUP bound to: 31'b0000101000000000000000011011001 
+	Parameter TXU_BIT_ZERO bound to: 4'b0000 
+	Parameter TXU_BIT_ONE bound to: 4'b0001 
+	Parameter TXU_BIT_TWO bound to: 4'b0010 
+	Parameter TXU_BIT_THREE bound to: 4'b0011 
+	Parameter TXU_BIT_FOUR bound to: 4'b0100 
+	Parameter TXU_BIT_FIVE bound to: 4'b0101 
+	Parameter TXU_BIT_SIX bound to: 4'b0110 
+	Parameter TXU_BIT_SEVEN bound to: 4'b0111 
+	Parameter TXU_PARITY bound to: 4'b1000 
+	Parameter TXU_STOP bound to: 4'b1001 
+	Parameter TXU_SECOND_STOP bound to: 4'b1010 
+	Parameter TXU_BREAK bound to: 4'b1110 
+	Parameter TXU_IDLE bound to: 4'b1111 
+INFO: [Synth 8-6155] done synthesizing module 'txuart' (2#1) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/txuart.v:99]
+INFO: [Synth 8-6157] synthesizing module 'rxuart' [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/rxuart.v:120]
+	Parameter INITIAL_SETUP bound to: 31'b0000101000000000000000011011001 
+INFO: [Synth 8-6155] done synthesizing module 'rxuart' (3#1) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/rxuart.v:120]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:176]
+INFO: [Synth 8-6157] synthesizing module 'simple_transmitter' [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:4]
+	Parameter MAX_BIT_SIZE bound to: 2048 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter DELAY_INIT bound to: 3'b001 
+	Parameter COOLDOWN_INIT bound to: 3'b010 
+	Parameter SEND_BIT bound to: 3'b011 
+	Parameter SEND_BIT_CONTINUE bound to: 3'b100 
+	Parameter COOLDOWN_BIT bound to: 3'b101 
+	Parameter FINISH bound to: 3'b110 
+	Parameter LOCAL_SIM_SYN_SWITCH bound to: 1 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:55]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:55]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:59]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:59]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:202]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:202]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:203]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:219]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:219]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:220]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39008]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (4#1) [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39008]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'txWireStart_second'. This will prevent further optimization [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:224]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'txWireStart'. This will prevent further optimization [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:207]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'txWireEnd'. This will prevent further optimization [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:214]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'txWireEnd_second'. This will prevent further optimization [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:231]
+INFO: [Synth 8-6155] done synthesizing module 'simple_transmitter' (5#1) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/simple_transmitter.sv:4]
+WARNING: [Synth 8-7023] instance 'simple_transmitter_INST' of module 'simple_transmitter' has 12 connections declared, but only 6 given [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantom_circuits_top.sv:338]
+INFO: [Synth 8-6157] synthesizing module 'phantum' [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:5]
+	Parameter NUM_RO_COUNTER bound to: 4 - type: integer 
+	Parameter MAX_BIT_SIZE bound to: 2048 - type: integer 
+	Parameter FIFO_READ_IDLE_RX bound to: 4'b0000 
+	Parameter FIFO_READ_1_RX bound to: 4'b0001 
+	Parameter FIFO_READ_2_RX bound to: 4'b0010 
+	Parameter FIFO_READ_WAIT_RX bound to: 4'b0011 
+	Parameter IDLE bound to: 4'b0100 
+	Parameter OFFSET bound to: 4'b0101 
+	Parameter ROMEASURE bound to: 4'b0110 
+	Parameter CONTINUE_MEASURE bound to: 4'b0111 
+	Parameter FINISH bound to: 4'b1000 
+	Parameter RO_COUNTER_IDLE bound to: 4'b1001 
+	Parameter RO_COUNTER_COUNT bound to: 4'b1010 
+	Parameter RO_COUNTER_CONTINUE bound to: 4'b1011 
+	Parameter RO_DATA_COMP_IDLE bound to: 4'b1100 
+	Parameter RO_DATA_COMP_CONTINUE bound to: 4'b1101 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:89]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:90]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:91]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:92]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:100]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:157]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:158]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:159]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:252]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:252]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:253]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:253]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:254]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:254]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:288]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:289]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:290]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/phantum.sv:309]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/aee38/Documents/fpga-phantom-circuits/src/ro_crosstalk_phantom_sameLongWire_ac701/build/ac701/src/counter.sv:1]
+	Parameter COUNTER_BIT bound to: 32 - type: integer 
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1616.496 ; gain = 180.410 ; free physical = 32613 ; free virtual = 54218
+---------------------------------------------------------------------------------
+synthesize failed
+INFO: [Common 17-83] Releasing license: Synthesis
+60 Infos, 21 Warnings, 0 Critical Warnings and 6 Errors encountered.
+synth_design failed
+INFO: [Common 17-206] Exiting Vivado at Thu Sep  1 00:53:16 2022...
+Building phantom_circuits design for board ac701...
+Setting up build directory...
+Building actual design...
+Done.

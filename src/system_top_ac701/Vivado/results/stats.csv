@@ -1,0 +1,7 @@
+experiment,name,pattern_orig,key,correct,total,percentage
+fpga,2,1010,diffs,0,2,0.0
+fpga,2,1010,31,1,2,50.0
+fpga,2,1010,0,1,2,50.0
+fpga,32,1010,diffs,28,32,87.5
+fpga,32,1010,31,10,32,31.25
+fpga,32,1010,0,17,32,53.125

@@ -1,0 +1,10 @@
+# compile verilog design source files
+verilog work \
+"../../util/clog2.v" \
+"../../util/mem_dual_xilinx.v" \
+"../counter.sv" \
+"../tb_counter.sv" \
+
+
+# Do not sort compile order
+nosort

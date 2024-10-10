@@ -1,0 +1,11 @@
+../build/ac701/src/clog2.v
+../build/ac701/src/power2.v
+../build/ac701/src/txuart.v
+../build/ac701/src/rxuart.v
+../build/ac701/src/counter.sv
+../build/ac701/src/defines.sv
+../build/ac701/src/transmitter.sv
+../build/ac701/src/receiver.sv
+../build/ac701/src/ro_defines.sv
+../build/ac701/src/ring_oscillator.sv
+../build/ac701/src/phantom_circuits_top.sv

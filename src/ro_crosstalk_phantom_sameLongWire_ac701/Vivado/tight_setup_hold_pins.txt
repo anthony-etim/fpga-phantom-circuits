@@ -1,0 +1,26 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|                      clk |                      clk |                                                   phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[3]/D|
+|                      clk |                      clk |                                                   phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[6]/D|
+|                      clk |                      clk |                                                   phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[0]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[31]/D|
+|                      clk |                      clk |                                                   phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[4]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[30]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[29]/D|
+|                      clk |                      clk |                                                                                 out_32bits_data_reg[27]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[19]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[10]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[20]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[26]/D|
+|                      clk |                      clk |                                                   phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[8]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[28]/D|
+|                      clk |                      clk |                                                   phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[9]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[22]/D|
+|                      clk |                      clk |                                                   phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[1]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[16]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[17]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[25]/D|
+|                      clk |                      clk |                                                  phantum_DUT/GEN_RO_COUNTER_FSM[0].fifo_data_wr_reg[24]/D|
+|                      clk |                      clk |                                                                                  out_32bits_data_reg[3]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

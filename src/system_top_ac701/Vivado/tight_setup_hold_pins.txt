@@ -1,0 +1,16 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                               ro_clock_INST/mmcm_comp_count_reg_reg[12]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                               ro_clock_INST/mmcm_comp_count_reg_reg[15]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                               ro_clock_INST/mmcm_comp_count_reg_reg[18]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                               ro_clock_INST/mmcm_comp_count_reg_reg[22]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                                ro_clock_INST/mmcm_comp_count_reg_reg[7]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                                ro_clock_INST/mmcm_comp_count_reg_reg[9]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                                ro_clock_INST/mmcm_comp_count_reg_reg[6]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                               ro_clock_INST/mmcm_comp_count_reg_reg[16]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                               ro_clock_INST/mmcm_comp_count_reg_reg[13]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                                ro_clock_INST/mmcm_comp_count_reg_reg[8]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                               ro_clock_INST/mmcm_comp_count_reg_reg[11]/D|
+| clk_out1_clk_wiz_ro_clock |                      clk |                                                               ro_clock_INST/mmcm_comp_count_reg_reg[29]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

@@ -1,0 +1,10 @@
+# compile verilog design source files
+verilog work \
+"../../util/clog2.v" \
+"../../util/mem_dual_xilinx.v" \
+"../fifo_mem.v" \
+"../tb_fifo.v" \
+
+
+# Do not sort compile order
+nosort

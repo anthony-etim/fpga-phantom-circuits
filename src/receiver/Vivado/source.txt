@@ -1,0 +1,6 @@
+../../util/mem_dual_xilinx.v
+../receiver.sv
+../tb_receiver.sv
+../dummyRO.sv
+../ro_defines.sv
+../../counter/counter.sv

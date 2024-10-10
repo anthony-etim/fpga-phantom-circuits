@@ -1,0 +1,20 @@
+{
+    "measurements": 4000,
+    "local_stressor_count_cycles": 15,
+    "pattern": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+    ],
+    "outdir": "measurements/fpga/0/",
+    "cpu_cores": null,
+    "sleep": 3,
+    "transmitter_mask": 16383,
+    "trans_trig_bit": null,
+    "heater_no": 0
+}

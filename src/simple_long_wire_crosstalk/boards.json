@@ -1,0 +1,8 @@
+{
+    "ac701": {
+        "partname": "xc7a200tfbg676",
+        "device": "xc7a200t",
+        "xdcfile": "../boards/ac701/ac701_rev2.0.xdc",
+        "input_clk_freq_mhz": "200"
+    }
+}

@@ -1,0 +1,30 @@
+# Mac OS files
+.DS_Store
+
+# Latex files
+*.aux
+*.out
+*.synctex.gz
+*.bbl
+*.blg
+main.log
+main.pdf
+*.jou
+*.log
+*xsim.dir
+*xelab.pb
+*sim.wdb
+*.wcfg
+*.vcd
+*build
+*.log
+
+# Vivado Temp files
+.Xil
+usage_statistics_webtalk.html
+usage_statistics_webtalk.xml
+vivado_pid*.str
+*hd_visual
+*screenlog.0
+
+

@@ -1,0 +1,1913 @@
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source synthesize.tcl
+# set fileName [lindex $argv 0]
+# catch {set fptr [open $fileName r]} ;
+# set contents [read -nonewline $fptr] ;
+# close $fptr ;
+# set splitCont [split $contents "\n"] ;
+# foreach f $splitCont {
+#   puts $f
+#   read_verilog $f
+# }
+../build/ac701/src/clog2.v
+../build/ac701/src/txuart.v
+../build/ac701/src/rxuart.v
+../build/ac701/src/counter.sv
+../build/ac701/src/defines.sv
+../build/ac701/src/ro_defines.sv
+../build/ac701/src/ring_oscillator.sv
+../build/ac701/src/async_fifo_loopback.v
+../build/ac701/src/comparator.sv
+# set top_module [lindex $argv 1]
+# set partname [lindex $argv 2]
+# set xdcfile  [lindex $argv 3]
+# set board [lindex $argv 4]
+# set_part $partname
+INFO: [Coretcl 2-1500] The part has been set to 'xc7a200tfbg676' for the current project only. Run set_part -help for more details. To evaluate different speed grades in the current design, use the set_speed_grade command, or use the open_checkpoint -part command to change the part used by an existing checkpoint design.
+# set_param general.maxThreads 8
+# set ip_dir  "../ip/xc7a200tfbg676"
+# set ip_clk_xci "$ip_dir/clk_wiz_0/clk_wiz_0.xci"
+# add_files $ip_clk_xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+# read_ip $ip_clk_xci
+CRITICAL WARNING: [Vivado 12-1504] The IP is already part of the fileset 'sources_1'. Requested source '/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0.xci' will not be added.
+# synth_ip [get_ips clk_wiz_0]
+INFO: [Vivado 12-3435] The given sub-design is up-to-date, no action was taken.  If a regeneration is desired, use the '-force' option: /home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0.xci
+INFO: [Vivado 12-3441] generate_netlist_ip - operation complete
+# get_files -compile_order sources -used_in synthesis
+# set ip_dir  "../ip/xc7a200tfbg676"
+# set ip_fifo_xci "$ip_dir/fifo_generator_0/fifo_generator_0.xci"
+# add_files $ip_fifo_xci
+# read_ip $ip_fifo_xci
+CRITICAL WARNING: [Vivado 12-1504] The IP is already part of the fileset 'sources_1'. Requested source '/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.xci' will not be added.
+# synth_ip [get_ips fifo_generator_0]
+INFO: [Vivado 12-3435] The given sub-design is up-to-date, no action was taken.  If a regeneration is desired, use the '-force' option: /home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.xci
+INFO: [Vivado 12-3441] generate_netlist_ip - operation complete
+# get_files -compile_order sources -used_in synthesis
+# update_compile_order -fileset sources_1
+# synth_design -part $partname -top $top_module
+Command: synth_design -part xc7a200tfbg676 -top async_fifo_loopback
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tfbg676-3
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17118 
+WARNING: [Synth 8-992] myROOutput is already implicitly declared earlier [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:64]
+WARNING: [Synth 8-992] clk_wiz_out is already implicitly declared earlier [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:66]
+WARNING: [Synth 8-992] clk is already implicitly declared earlier [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:72]
+WARNING: [Synth 8-6901] identifier 'ro_comp_count' is used before its declaration [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:291]
+WARNING: [Synth 8-6901] identifier 'ro_comp_count_reg' is used before its declaration [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:292]
+WARNING: [Synth 8-6901] identifier 'ro_comp_count_reg' is used before its declaration [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:292]
+WARNING: [Synth 8-6901] identifier 'ro_comp_count' is used before its declaration [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:301]
+WARNING: [Synth 8-6901] identifier 'ro_comp_count_reg' is used before its declaration [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:302]
+WARNING: [Synth 8-6901] identifier 'ro_comp_count_reg' is used before its declaration [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:302]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1852.078 ; gain = 158.516 ; free physical = 152386 ; free virtual = 181032
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'async_fifo_loopback' [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:9]
+	Parameter BAUD_RATE bound to: 921600 - type: integer 
+	Parameter CLK_SPEED bound to: 200000000 - type: integer 
+	Parameter RO_TYPE bound to: 2 - type: integer 
+	Parameter STAGES bound to: 2 - type: integer 
+	Parameter COUNTER_BIT bound to: 32 - type: integer 
+	Parameter RO_POSIITON bound to: 15 - type: integer 
+	Parameter CLOCKS_PER_BIT bound to: 10000 - type: integer 
+	Parameter INITIAL_SETUP bound to: 31'b0000101000000000000000011011001 
+	Parameter IDLE_rx bound to: 4'b0000 
+	Parameter DELAY_rx_one bound to: 4'b0001 
+	Parameter DELAY_rx_two bound to: 4'b0010 
+	Parameter IDLE bound to: 4'b0000 
+	Parameter DELAY_ONE bound to: 4'b0001 
+	Parameter DELAY_TWO bound to: 4'b0010 
+	Parameter DELAY_THREE bound to: 4'b0011 
+	Parameter IDLE_tx bound to: 4'b0000 
+	Parameter DELAY_tx_one bound to: 4'b0001 
+	Parameter DELAY_tx_two bound to: 4'b0010 
+	Parameter DELAY_tx_three bound to: 4'b0011 
+	Parameter GET_MMCM_COUNTS bound to: 8'b00000001 
+	Parameter GET_RO_COUNTS bound to: 8'b00000010 
+	Parameter GET_FIFO_WRITE bound to: 8'b00000011 
+	Parameter GET_FIFO_READ bound to: 8'b00000100 
+	Parameter MMCM_COUNTS bound to: 4'b0101 
+	Parameter RO_COUNTS bound to: 4'b0110 
+	Parameter FIFO_WRITE bound to: 4'b0111 
+	Parameter FIFO_READ bound to: 4'b1000 
+	Parameter WAIT_RETURN bound to: 4'b1001 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:28]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:29]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:32]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:33]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:36]
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:37]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/counter.sv:1]
+	Parameter COUNTER_BIT bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (1#1) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/counter.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32871]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: FALSE - type: string 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (2#1) [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:32871]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:179]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:225]
+INFO: [Synth 8-6157] synthesizing module 'txuart' [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/txuart.v:99]
+	Parameter INITIAL_SETUP bound to: 31'b0000101000000000000000011011001 
+	Parameter TXU_BIT_ZERO bound to: 4'b0000 
+	Parameter TXU_BIT_ONE bound to: 4'b0001 
+	Parameter TXU_BIT_TWO bound to: 4'b0010 
+	Parameter TXU_BIT_THREE bound to: 4'b0011 
+	Parameter TXU_BIT_FOUR bound to: 4'b0100 
+	Parameter TXU_BIT_FIVE bound to: 4'b0101 
+	Parameter TXU_BIT_SIX bound to: 4'b0110 
+	Parameter TXU_BIT_SEVEN bound to: 4'b0111 
+	Parameter TXU_PARITY bound to: 4'b1000 
+	Parameter TXU_STOP bound to: 4'b1001 
+	Parameter TXU_SECOND_STOP bound to: 4'b1010 
+	Parameter TXU_BREAK bound to: 4'b1110 
+	Parameter TXU_IDLE bound to: 4'b1111 
+INFO: [Synth 8-6155] done synthesizing module 'txuart' (3#1) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/txuart.v:99]
+INFO: [Synth 8-6157] synthesizing module 'rxuart' [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/rxuart.v:120]
+	Parameter INITIAL_SETUP bound to: 31'b0000101000000000000000011011001 
+INFO: [Synth 8-6155] done synthesizing module 'rxuart' (4#1) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/rxuart.v:120]
+INFO: [Synth 8-6157] synthesizing module 'fifo_generator_0' [/home/anthony/fpga-phantom-circuits/src/async_fifo/Vivado/.Xil/Vivado-16907-caslab-srv3/realtime/fifo_generator_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_generator_0' (5#1) [/home/anthony/fpga-phantom-circuits/src/async_fifo/Vivado/.Xil/Vivado-16907-caslab-srv3/realtime/fifo_generator_0_stub.v:6]
+WARNING: [Synth 8-7023] instance 'rx_async_fifo' of module 'fifo_generator_0' has 11 connections declared, but only 9 given [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:418]
+WARNING: [Synth 8-7023] instance 'tx_async_fifo' of module 'fifo_generator_0' has 11 connections declared, but only 9 given [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:433]
+INFO: [Synth 8-6157] synthesizing module 'ring_oscillator' [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/ring_oscillator.sv:32]
+	Parameter RO_TYPE bound to: 2 - type: integer 
+	Parameter STAGES bound to: 2 - type: integer 
+	Parameter LAST bound to: 3 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* DONT_TOUCH = "TRUE" *) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/ring_oscillator.sv:45]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39008]
+	Parameter INIT bound to: 2'b10 
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (6#1) [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39008]
+INFO: [Synth 8-6157] synthesizing module 'LD' [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:38696]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'LD' (7#1) [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:38696]
+INFO: [Synth 8-6157] synthesizing module 'LUT2' [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39042]
+	Parameter INIT bound to: 4'b0100 
+INFO: [Synth 8-6155] done synthesizing module 'LUT2' (8#1) [/tools/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:39042]
+INFO: [Synth 8-6155] done synthesizing module 'ring_oscillator' (9#1) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/ring_oscillator.sv:32]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/anthony/fpga-phantom-circuits/src/async_fifo/Vivado/.Xil/Vivado-16907-caslab-srv3/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (10#1) [/home/anthony/fpga-phantom-circuits/src/async_fifo/Vivado/.Xil/Vivado-16907-caslab-srv3/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'comparator' [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/comparator.sv:1]
+	Parameter COUNTER_BIT bound to: 32 - type: integer 
+	Parameter CLOCKS_PER_BIT bound to: 10000 - type: integer 
+WARNING: [Synth 8-6104] Input port 'clk_count_in' has an internal driver [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/comparator.sv:15]
+WARNING: [Synth 8-6104] Input port 'comp_count_in' has an internal driver [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/comparator.sv:18]
+WARNING: [Synth 8-3848] Net comp_count_in_reg in module/entity comparator does not have driver. [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/comparator.sv:17]
+INFO: [Synth 8-6155] done synthesizing module 'comparator' (11#1) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/comparator.sv:1]
+WARNING: [Synth 8-6014] Unused sequential element ro_comp_count_reg_reg was removed.  [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:292]
+INFO: [Synth 8-6155] done synthesizing module 'async_fifo_loopback' (12#1) [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/async_fifo_loopback.v:9]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[32]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[31]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[30]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[29]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[28]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[27]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[26]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[25]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[24]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[23]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[22]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[21]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[20]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[19]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[18]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[17]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[16]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[15]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[14]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[13]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[12]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[11]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[10]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[9]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[8]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[7]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[6]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[5]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[4]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[3]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[2]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[1]
+WARNING: [Synth 8-3331] design comparator has unconnected port clk_count_in[0]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[31]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[30]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[29]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[28]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[27]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[26]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[25]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[24]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[23]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[22]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[21]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[20]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[19]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[18]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[17]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[16]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[15]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[14]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[13]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[12]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[11]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[10]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[9]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[8]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[7]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[6]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[5]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[4]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[3]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[2]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[1]
+WARNING: [Synth 8-3331] design comparator has unconnected port comp_count_in[0]
+WARNING: [Synth 8-3331] design rxuart has unconnected port i_setup[30]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1885.984 ; gain = 192.422 ; free physical = 152412 ; free virtual = 181059
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1903.797 ; gain = 210.234 ; free physical = 152411 ; free virtual = 181058
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1903.797 ; gain = 210.234 ; free physical = 152410 ; free virtual = 181058
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wizard'
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wizard'
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'rx_async_fifo'
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'rx_async_fifo'
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'tx_async_fifo'
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0/fifo_generator_0_in_context.xdc] for cell 'tx_async_fifo'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2067.445 ; gain = 0.000 ; free physical = 152312 ; free virtual = 180959
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2067.445 ; gain = 0.000 ; free physical = 152312 ; free virtual = 180959
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'rx_async_fifo' at clock pin 'rd_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'tx_async_fifo' at clock pin 'wr_clk' is different from the actual clock period '5.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152352 ; free virtual = 180999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152351 ; free virtual = 180999
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for clk_wizard. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for rx_async_fifo. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for tx_async_fifo. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152352 ; free virtual = 180999
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_rx_reg' in module 'async_fifo_loopback'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'async_fifo_loopback'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                             0000
+               DELAY_ONE |                               01 |                             0001
+               DELAY_TWO |                               10 |                             0010
+             DELAY_THREE |                               11 |                             0011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'async_fifo_loopback'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 IDLE_rx |                               00 |                             0000
+              FIFO_WRITE |                               01 |                             0111
+            DELAY_rx_one |                               10 |                             0001
+            DELAY_rx_two |                               11 |                             0010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_rx_reg' using encoding 'sequential' in module 'async_fifo_loopback'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152343 ; free virtual = 180991
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 7     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 3     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               31 Bit    Registers := 1     
+	               30 Bit    Registers := 1     
+	               28 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 26    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   7 Input     28 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 6     
+	   4 Input     28 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	   4 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 7     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 8     
+	   4 Input      4 Bit        Muxes := 1     
+	   9 Input      4 Bit        Muxes := 1     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   4 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 44    
+	   3 Input      1 Bit        Muxes := 4     
+	   9 Input      1 Bit        Muxes := 7     
+	   4 Input      1 Bit        Muxes := 7     
+	   8 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module async_fifo_loopback 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	   9 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   3 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      2 Bit        Muxes := 2     
+	   9 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 7     
+	   8 Input      1 Bit        Muxes := 1     
+Module txuart 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               31 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   7 Input     28 Bit        Muxes := 1     
+	   2 Input     28 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 19    
+	   3 Input      1 Bit        Muxes := 2     
+Module rxuart 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     28 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               30 Bit    Registers := 1     
+	               28 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     28 Bit        Muxes := 3     
+	   4 Input     28 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   3 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 10    
+Module comparator 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'mmcm_counter_count_reg_reg[31]' (FDE) to 'mmcm_counter_count_reg_reg[30]'
+INFO: [Synth 8-3886] merging instance 'mmcm_counter_count_reg_reg[30]' (FDE) to 'mmcm_counter_count_reg_reg[29]'
+INFO: [Synth 8-3886] merging instance 'mmcm_counter_count_reg_reg[29]' (FDE) to 'mmcm_counter_count_reg_reg[28]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[31]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[30]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[29]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[28]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[27]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[26]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[25]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[24]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[23]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[22]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[21]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[20]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[19]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[18]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[17]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[16]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[15]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[14]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[13]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[12]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[11]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[10]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[9]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[8]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[7]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'mmcm_counter_count_reg_reg[28]' (FDE) to 'mmcm_counter_count_reg_reg[27]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[6]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'mmcm_counter_count_reg_reg[27]' (FDE) to 'mmcm_counter_count_reg_reg[26]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[5]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[4]'
+INFO: [Synth 8-3886] merging instance 'mmcm_counter_count_reg_reg[26]' (FDE) to 'mmcm_counter_count_reg_reg[25]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[4]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'mmcm_counter_count_reg_reg[25]' (FDE) to 'mmcm_counter_count_reg_reg[24]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[3]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\mmcm_counter_count_reg_reg[24] )
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[0]' (FDE) to 'rx_uart/r_setup_reg[3]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[24]' (FDE) to 'rx_uart/r_setup_reg[3]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[1]' (FDE) to 'rx_uart/r_setup_reg[2]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[25]' (FDE) to 'rx_uart/r_setup_reg[2]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[2]' (FDE) to 'rx_uart/r_setup_reg[5]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[3]' (FDE) to 'rx_uart/r_setup_reg[4]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[4]' (FDE) to 'rx_uart/r_setup_reg[6]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[5]' (FDE) to 'rx_uart/r_setup_reg[8]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[6]' (FDE) to 'rx_uart/r_setup_reg[7]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[7]' (FDE) to 'rx_uart/r_setup_reg[26]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[8]' (FDE) to 'rx_uart/r_setup_reg[9]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[9]' (FDE) to 'rx_uart/r_setup_reg[10]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[10]' (FDE) to 'rx_uart/r_setup_reg[11]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[11]' (FDE) to 'rx_uart/r_setup_reg[12]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[12]' (FDE) to 'rx_uart/r_setup_reg[13]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[13]' (FDE) to 'rx_uart/r_setup_reg[14]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[14]' (FDE) to 'rx_uart/r_setup_reg[15]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[15]' (FDE) to 'rx_uart/r_setup_reg[16]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[16]' (FDE) to 'rx_uart/r_setup_reg[17]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[17]' (FDE) to 'rx_uart/r_setup_reg[18]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[18]' (FDE) to 'rx_uart/r_setup_reg[19]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[19]' (FDE) to 'rx_uart/r_setup_reg[20]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[20]' (FDE) to 'rx_uart/r_setup_reg[21]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[21]' (FDE) to 'rx_uart/r_setup_reg[22]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[22]' (FDE) to 'rx_uart/r_setup_reg[23]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[23]' (FDE) to 'rx_uart/r_setup_reg[27]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[2]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\rx_uart/r_setup_reg[26] )
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[27]' (FDE) to 'rx_uart/r_setup_reg[28]'
+INFO: [Synth 8-3886] merging instance 'COMPARTATOR_RO/count_out_reg_reg[1]' (FDRE) to 'COMPARTATOR_RO/count_out_reg_reg[0]'
+INFO: [Synth 8-3886] merging instance 'rx_uart/r_setup_reg[29]' (FDE) to 'rx_uart/r_setup_reg[28]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rx_uart/r_setup_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\COMPARTATOR_RO/count_out_reg_reg[0] )
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[21]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[29]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[28]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[22]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[23]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[14]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[15]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[16]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[17]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[18]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[19]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[20]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[11]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[12]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[13]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[0]' (FDE) to 'tx_uart/r_setup_reg[26]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[1]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[2]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[3]' (FDE) to 'tx_uart/r_setup_reg[26]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[4]' (FDE) to 'tx_uart/r_setup_reg[26]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[5]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[6]' (FDE) to 'tx_uart/r_setup_reg[26]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[7]' (FDE) to 'tx_uart/r_setup_reg[26]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[8]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[9]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[10]' (FDE) to 'tx_uart/r_setup_reg[30]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\return_state_reg[3] )
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[30]' (FDE) to 'tx_uart/r_setup_reg[27]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[26]' (FDE) to 'tx_uart/r_setup_reg[24]'
+INFO: [Synth 8-3886] merging instance 'tx_uart/r_setup_reg[27]' (FDE) to 'tx_uart/r_setup_reg[25]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tx_uart/r_setup_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_uart/r_setup_reg[25] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152309 ; free virtual = 180959
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wizard/clk_in1' to pin '{ring_oscillator_INST/ro_stages[1].ro_buf/O}'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wizard/clk_out1' to pin 'clk_wizard/bbstub_clk_out1/O'
+INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'clk_wizard/clk_in1' to 'ring_oscillator_INST/ro_ld/D'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152189 ; free virtual = 180840
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152189 ; free virtual = 180839
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_uart/q_cts_n_reg )
+INFO: [Synth 8-3886] merging instance 'tx_uart/qq_cts_n_reg' (FDS) to 'tx_uart/q_cts_n_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_uart/q_cts_n_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tx_uart/ck_cts_reg )
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152185 ; free virtual = 180835
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/src/counter.sv:10]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152185 ; free virtual = 180835
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152185 ; free virtual = 180835
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152186 ; free virtual = 180836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152186 ; free virtual = 180836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152186 ; free virtual = 180836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152186 ; free virtual = 180836
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------+----------+
+|      |BlackBox name    |Instances |
++------+-----------------+----------+
+|1     |fifo_generator_0 |         2|
+|2     |clk_wiz_0        |         1|
++------+-----------------+----------+
+
+Report Cell Usage: 
++------+--------------------+------+
+|      |Cell                |Count |
++------+--------------------+------+
+|1     |clk_wiz_0           |     1|
+|2     |fifo_generator_0    |     1|
+|3     |fifo_generator_0__2 |     1|
+|4     |BUFG                |     1|
+|5     |CARRY4              |    52|
+|6     |LUT1                |    62|
+|7     |LUT2                |    83|
+|8     |LUT3                |    19|
+|9     |LUT4                |    38|
+|10    |LUT5                |    16|
+|11    |LUT6                |    55|
+|12    |FDCE                |    32|
+|13    |FDRE                |   261|
+|14    |FDSE                |     4|
+|15    |LD                  |     1|
+|16    |IBUF                |     1|
+|17    |IBUFDS              |     1|
+|18    |OBUF                |     1|
++------+--------------------+------+
+
+Report Instance Areas: 
++------+-----------------------+----------------+------+
+|      |Instance               |Module          |Cells |
++------+-----------------------+----------------+------+
+|1     |top                    |                |   652|
+|2     |  ring_oscillator_INST |ring_oscillator |     4|
+|3     |  counter_MMCM         |counter         |    41|
+|4     |  counter_RO           |counter_0       |    41|
+|5     |  counter_clock        |counter_1       |    41|
+|6     |  rx_uart              |rxuart          |   219|
+|7     |  tx_uart              |txuart          |   154|
++------+-----------------------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152186 ; free virtual = 180836
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2073.383 ; gain = 210.234 ; free physical = 152237 ; free virtual = 180888
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2073.383 ; gain = 379.820 ; free physical = 152237 ; free virtual = 180887
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-454] Reading design checkpoint '/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.dcp' for cell 'rx_async_fifo'
+INFO: [Project 1-454] Reading design checkpoint '/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wizard'
+INFO: [Netlist 29-17] Analyzing 73 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. clk_wizard/inst/clkin1_ibufg 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wizard/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wizard/inst'
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wizard/inst'
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wizard/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0.xdc:57]
+WARNING: [Vivado 12-2489] -input_jitter contains time 0.060600 which will be rounded to 0.061 to ensure it is an integer multiple of 1 picosecond [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wizard/inst'
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.xdc] for cell 'rx_async_fifo/U0'
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.xdc] for cell 'rx_async_fifo/U0'
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.xdc] for cell 'tx_async_fifo/U0'
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.xdc] for cell 'tx_async_fifo/U0'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.dcp'
+INFO: [Project 1-538] Using original IP XDC constraints instead of the XDC constraints in dcp '/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0.dcp'
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'rx_async_fifo/U0'
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'rx_async_fifo/U0'
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'tx_async_fifo/U0'
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/ip/xc7a200tfbg676/fifo_generator_0/fifo_generator_0_clocks.xdc] for cell 'tx_async_fifo/U0'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.gic_rst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'rx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+Finished Sourcing Tcl File [/tools/Xilinx/Vivado/2019.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gsckt_wrst.xpm_cdc_sync_rst_inst_wrst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2582.523 ; gain = 0.000 ; free physical = 151865 ; free virtual = 180515
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+167 Infos, 87 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:01:50 . Memory (MB): peak = 2582.523 ; gain = 1143.961 ; free physical = 151960 ; free virtual = 180610
+# read_xdc $xdcfile
+Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/boards/ac701/ac701_rev2.0.xdc]
+Finished Parsing XDC File [/home/anthony/fpga-phantom-circuits/src/async_fifo/boards/ac701/ac701_rev2.0.xdc]
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2646.555 ; gain = 64.031 ; free physical = 151966 ; free virtual = 180616
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 1f2cc7b0c
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151965 ; free virtual = 180615
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1f2cc7b0c
+
+Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151835 ; free virtual = 180485
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Retarget, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1f2cc7b0c
+
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151835 ; free virtual = 180485
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 4 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Sweep
+INFO: [Opt 31-120] Instance counter_clock (counter_1) has been optimized to an empty box cell during sweep but it has constraints that prevent its removal. Empty box cells do not impact the implementation flow but they have no functional relevance.
+Resolution: If this is not expected, please check for DONT_TOUCH properties or timing constraint set on the empty box cell or on nets connected to the cell. If found, remove the relevant DONT_TOUCH property or timing constraint and re-run opt_design.
+INFO: [Opt 31-120] Instance counter_RO (counter_0) has been optimized to an empty box cell during sweep but it has constraints that prevent its removal. Empty box cells do not impact the implementation flow but they have no functional relevance.
+Resolution: If this is not expected, please check for DONT_TOUCH properties or timing constraint set on the empty box cell or on nets connected to the cell. If found, remove the relevant DONT_TOUCH property or timing constraint and re-run opt_design.
+Phase 3 Sweep | Checksum: 24aa08dd4
+
+Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151835 ; free virtual = 180485
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 82 cells
+INFO: [Opt 31-1021] In phase Sweep, 123 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 24aa08dd4
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151835 ; free virtual = 180485
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+INFO: [Opt 31-1021] In phase BUFG optimization, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 24aa08dd4
+
+Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151835 ; free virtual = 180485
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 24aa08dd4
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151835 ; free virtual = 180485
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 3 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              2  |
+|  Constant propagation         |               0  |               0  |                                              4  |
+|  Sweep                        |               0  |              82  |                                            123  |
+|  BUFG optimization            |               0  |               0  |                                              1  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              3  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151835 ; free virtual = 180485
+Ending Logic Optimization Task | Checksum: 279634883
+
+Time (s): cpu = 00:00:00.21 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2646.555 ; gain = 0.000 ; free physical = 151835 ; free virtual = 180485
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.520 | TNS=0.000 |
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 2 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 1 newly gated: 0 Total Ports: 4
+Ending PowerOpt Patch Enables Task | Checksum: 19d4bf5a0
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2773.352 ; gain = 0.000 ; free physical = 151829 ; free virtual = 180479
+Ending Power Optimization Task | Checksum: 19d4bf5a0
+
+Time (s): cpu = 00:00:00.99 ; elapsed = 00:00:00.63 . Memory (MB): peak = 2773.352 ; gain = 126.797 ; free physical = 151833 ; free virtual = 180484
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 19d4bf5a0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2773.352 ; gain = 0.000 ; free physical = 151833 ; free virtual = 180484
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2773.352 ; gain = 0.000 ; free physical = 151833 ; free virtual = 180484
+Ending Netlist Obfuscation Task | Checksum: 181d4d65a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2773.352 ; gain = 0.000 ; free physical = 151833 ; free virtual = 180484
+INFO: [Common 17-83] Releasing license: Implementation
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+# place_design
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2797.363 ; gain = 0.000 ; free physical = 151826 ; free virtual = 180476
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: d8fcb77b
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2797.363 ; gain = 0.000 ; free physical = 151826 ; free virtual = 180476
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2797.363 ; gain = 0.000 ; free physical = 151826 ; free virtual = 180476
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: f9f4ba27
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.62 . Memory (MB): peak = 2797.363 ; gain = 0.000 ; free physical = 151822 ; free virtual = 180472
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1103adbe7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.83 . Memory (MB): peak = 2797.363 ; gain = 0.000 ; free physical = 151819 ; free virtual = 180469
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1103adbe7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2797.363 ; gain = 0.000 ; free physical = 151819 ; free virtual = 180469
+Phase 1 Placer Initialization | Checksum: 1103adbe7
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.84 . Memory (MB): peak = 2797.363 ; gain = 0.000 ; free physical = 151819 ; free virtual = 180469
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1f0d209db
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.97 . Memory (MB): peak = 2797.363 ; gain = 0.000 ; free physical = 151802 ; free virtual = 180453
+
+Phase 2.2 Global Placement Core
+
+Phase 2.2.1 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for HD net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.371 ; gain = 0.000 ; free physical = 151778 ; free virtual = 180428
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+----------------------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  HD Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                         |            0  |              0  |                     0  |           0  |           5  |  00:00:00  |
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2.1 Physical Synthesis In Placer | Checksum: 1b402d883
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151779 ; free virtual = 180429
+Phase 2.2 Global Placement Core | Checksum: 1f7ef425e
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151776 ; free virtual = 180427
+Phase 2 Global Placement | Checksum: 1f7ef425e
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151777 ; free virtual = 180428
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 2077fa059
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151777 ; free virtual = 180428
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 11642b094
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151776 ; free virtual = 180426
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 11a28aee8
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151776 ; free virtual = 180426
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1591324fc
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151777 ; free virtual = 180427
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 16eaa6daa
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:03 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151775 ; free virtual = 180425
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 18eccb9a3
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:04 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151772 ; free virtual = 180422
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 16f90bf8d
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:04 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151772 ; free virtual = 180422
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 130225d99
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:04 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151772 ; free virtual = 180422
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 104402e17
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:04 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151771 ; free virtual = 180421
+Phase 3 Detail Placement | Checksum: 104402e17
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:04 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151771 ; free virtual = 180421
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 1b4864c19
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 1b4864c19
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:04 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151771 ; free virtual = 180421
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.317. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 29508b869
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151791 ; free virtual = 180441
+Phase 4.1 Post Commit Optimization | Checksum: 29508b869
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151791 ; free virtual = 180441
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 29508b869
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151793 ; free virtual = 180443
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 29508b869
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151793 ; free virtual = 180443
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2813.371 ; gain = 0.000 ; free physical = 151793 ; free virtual = 180443
+Phase 4.4 Final Placement Cleanup | Checksum: 221351cac
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151793 ; free virtual = 180443
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 221351cac
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151793 ; free virtual = 180443
+Ending Placer Task | Checksum: 12abc3e58
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 2813.371 ; gain = 16.008 ; free physical = 151793 ; free virtual = 180443
+INFO: [Common 17-83] Releasing license: Implementation
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:07 . Memory (MB): peak = 2813.371 ; gain = 40.020 ; free physical = 151829 ; free virtual = 180480
+# route_design
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+Checksum: PlaceDB: a744b468 ConstDB: 0 ShapeSum: 837789f0 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 11cc617b9
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:41 . Memory (MB): peak = 2834.312 ; gain = 20.941 ; free physical = 151614 ; free virtual = 180264
+Post Restoration Checksum: NetGraph: a81385ec NumContArr: 74b291cd Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 11cc617b9
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 2857.309 ; gain = 43.938 ; free physical = 151583 ; free virtual = 180233
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 11cc617b9
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 2897.309 ; gain = 83.938 ; free physical = 151541 ; free virtual = 180191
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 11cc617b9
+
+Time (s): cpu = 00:00:50 ; elapsed = 00:00:42 . Memory (MB): peak = 2897.309 ; gain = 83.938 ; free physical = 151541 ; free virtual = 180191
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 12b89b3df
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:43 . Memory (MB): peak = 2935.824 ; gain = 122.453 ; free physical = 151528 ; free virtual = 180179
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.227 | TNS=-4.406 | WHS=-2.476 | THS=-119.004|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 12e53f545
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:43 . Memory (MB): peak = 2935.824 ; gain = 122.453 ; free physical = 151524 ; free virtual = 180175
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.227 | TNS=-4.394 | WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: c746f2a2
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:43 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151526 ; free virtual = 180177
+Phase 2 Router Initialization | Checksum: 10d783990
+
+Time (s): cpu = 00:00:52 ; elapsed = 00:00:43 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151526 ; free virtual = 180177
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 2.0245e-05 %
+  Global Horizontal Routing Utilization  = 0.000132188 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 753
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 752
+  Number of Partially Routed Nets     = 1
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 1d67c0d19
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:44 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151523 ; free virtual = 180173
+INFO: [Route 35-580] Design has 32 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|                      clk |                      clk |                                                                                          tx_byte_reg[0]/D|
+|                      clk |                      clk |                                                                                          tx_byte_reg[5]/D|
+|                      clk |                      clk |                                                                                          tx_byte_reg[7]/D|
+|                      clk |                      clk |                                                                                          tx_byte_reg[6]/D|
+|                      clk |                      clk |                                                                                          tx_byte_reg[4]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 101
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.290 | TNS=-6.266 | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 170f43ce0
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151527 ; free virtual = 180177
+Phase 4 Rip-up And Reroute | Checksum: 170f43ce0
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151527 ; free virtual = 180177
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 126948d53
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151527 ; free virtual = 180177
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.290 | TNS=-6.266 | WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 17c0e5214
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151527 ; free virtual = 180177
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 17c0e5214
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151527 ; free virtual = 180177
+Phase 5 Delay and Skew Optimization | Checksum: 17c0e5214
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151526 ; free virtual = 180177
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1d67c2c69
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:44 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151526 ; free virtual = 180177
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.290 | TNS=-6.266 | WHS=-0.155 | THS=-0.650 |
+
+Phase 6.1 Hold Fix Iter | Checksum: 289075a75
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151504 ; free virtual = 180154
+Phase 6 Post Hold Fix | Checksum: 226889ccb
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151504 ; free virtual = 180154
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.148315 %
+  Global Horizontal Routing Utilization  = 0.0993391 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 30.6306%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 35.1351%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 38.2353%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 32.3529%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 1defaa411
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151504 ; free virtual = 180154
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1defaa411
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151503 ; free virtual = 180153
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 21854685a
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151502 ; free virtual = 180152
+
+Phase 10 Post Router Timing
+
+Phase 10.1 Update Timing
+Phase 10.1 Update Timing | Checksum: 2abc713ba
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151503 ; free virtual = 180154
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-0.290 | TNS=-6.266 | WHS=0.064  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 2abc713ba
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151503 ; free virtual = 180154
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:45 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151566 ; free virtual = 180216
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+14 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:58 ; elapsed = 00:02:47 . Memory (MB): peak = 2951.824 ; gain = 138.453 ; free physical = 151570 ; free virtual = 180220
+# report_utilization
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Fri May 27 21:56:05 2022
+| Host         : caslab-srv3 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_utilization
+| Design       : async_fifo_loopback
+| Device       : 7a200tfbg676-3
+| Design State : Fully Placed
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Slice Logic Distribution
+3. Memory
+4. DSP
+5. IO and GT Specific
+6. Clocking
+7. Specific Feature
+8. Primitives
+9. Black Boxes
+10. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Fixed | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| Slice LUTs                 |  367 |     0 |    133800 |  0.27 |
+|   LUT as Logic             |  361 |     0 |    133800 |  0.27 |
+|   LUT as Memory            |    6 |     0 |     46200 |  0.01 |
+|     LUT as Distributed RAM |    0 |     0 |           |       |
+|     LUT as Shift Register  |    6 |     0 |           |       |
+| Slice Registers            |  556 |     0 |    267600 |  0.21 |
+|   Register as Flip Flop    |  555 |     0 |    267600 |  0.21 |
+|   Register as Latch        |    1 |     0 |    267600 | <0.01 |
+| F7 Muxes                   |    0 |     0 |     66900 |  0.00 |
+| F8 Muxes                   |    0 |     0 |     33450 |  0.00 |
++----------------------------+------+-------+-----------+-------+
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 33    |          Yes |           - |        Reset |
+| 20    |          Yes |         Set |            - |
+| 503   |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Slice Logic Distribution
+---------------------------
+
++--------------------------------------------+------+-------+-----------+-------+
+|                  Site Type                 | Used | Fixed | Available | Util% |
++--------------------------------------------+------+-------+-----------+-------+
+| Slice                                      |  169 |     0 |     33450 |  0.51 |
+|   SLICEL                                   |  101 |     0 |           |       |
+|   SLICEM                                   |   68 |     0 |           |       |
+| LUT as Logic                               |  361 |     0 |    133800 |  0.27 |
+|   using O5 output only                     |    0 |       |           |       |
+|   using O6 output only                     |  280 |       |           |       |
+|   using O5 and O6                          |   81 |       |           |       |
+| LUT as Memory                              |    6 |     0 |     46200 |  0.01 |
+|   LUT as Distributed RAM                   |    0 |     0 |           |       |
+|   LUT as Shift Register                    |    6 |     0 |           |       |
+|     using O5 output only                   |    6 |       |           |       |
+|     using O6 output only                   |    0 |       |           |       |
+|     using O5 and O6                        |    0 |       |           |       |
+| Slice Registers                            |  556 |     0 |    267600 |  0.21 |
+|   Register driven from within the Slice    |  309 |       |           |       |
+|   Register driven from outside the Slice   |  247 |       |           |       |
+|     LUT in front of the register is unused |  191 |       |           |       |
+|     LUT in front of the register is used   |   56 |       |           |       |
+| Unique Control Sets                        |   29 |       |     33450 |  0.09 |
++--------------------------------------------+------+-------+-----------+-------+
+* Note: Available Control Sets calculated as Slice Registers / 8, Review the Control Sets Report for more information regarding control sets.
+
+
+3. Memory
+---------
+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    |    1 |     0 |       365 |  0.27 |
+|   RAMB36/FIFO*    |    0 |     0 |       365 |  0.00 |
+|   RAMB18          |    2 |     0 |       730 |  0.27 |
+|     RAMB18E1 only |    2 |       |           |       |
++-------------------+------+-------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+4. DSP
+------
+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |       740 |  0.00 |
++-----------+------+-------+-----------+-------+
+
+
+5. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+-----------+-------+
+|          Site Type          | Used | Fixed | Available | Util% |
++-----------------------------+------+-------+-----------+-------+
+| Bonded IOB                  |    4 |     4 |       400 |  1.00 |
+|   IOB Master Pads           |    2 |       |           |       |
+|   IOB Slave Pads            |    2 |       |           |       |
+| Bonded IPADs                |    0 |     0 |        26 |  0.00 |
+| Bonded OPADs                |    0 |     0 |        16 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |        10 |  0.00 |
+| PHASER_REF                  |    0 |     0 |        10 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |        40 |  0.00 |
+| IN_FIFO                     |    0 |     0 |        40 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |        10 |  0.00 |
+| IBUFDS                      |    1 |     1 |       384 |  0.26 |
+| GTPE2_CHANNEL               |    0 |     0 |         8 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |        40 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |        40 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |       500 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |         4 |  0.00 |
+| ILOGIC                      |    0 |     0 |       400 |  0.00 |
+| OLOGIC                      |    0 |     0 |       400 |  0.00 |
++-----------------------------+------+-------+-----------+-------+
+
+
+6. Clocking
+-----------
+
++------------+------+-------+-----------+-------+
+|  Site Type | Used | Fixed | Available | Util% |
++------------+------+-------+-----------+-------+
+| BUFGCTRL   |    3 |     0 |        32 |  9.38 |
+| BUFIO      |    0 |     0 |        40 |  0.00 |
+| MMCME2_ADV |    1 |     0 |        10 | 10.00 |
+| PLLE2_ADV  |    0 |     0 |        10 |  0.00 |
+| BUFMRCE    |    0 |     0 |        20 |  0.00 |
+| BUFHCE     |    0 |     0 |       120 |  0.00 |
+| BUFR       |    0 |     0 |        40 |  0.00 |
++------------+------+-------+-----------+-------+
+
+
+7. Specific Feature
+-------------------
+
++-------------+------+-------+-----------+-------+
+|  Site Type  | Used | Fixed | Available | Util% |
++-------------+------+-------+-----------+-------+
+| BSCANE2     |    0 |     0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |         2 |  0.00 |
+| PCIE_2_1    |    0 |     0 |         1 |  0.00 |
+| STARTUPE2   |    0 |     0 |         1 |  0.00 |
+| XADC        |    0 |     0 |         1 |  0.00 |
++-------------+------+-------+-----------+-------+
+
+
+8. Primitives
+-------------
+
++------------+------+---------------------+
+|  Ref Name  | Used | Functional Category |
++------------+------+---------------------+
+| FDRE       |  503 |        Flop & Latch |
+| LUT2       |  151 |                 LUT |
+| LUT4       |   93 |                 LUT |
+| LUT6       |   69 |                 LUT |
+| LUT1       |   64 |                 LUT |
+| CARRY4     |   52 |          CarryLogic |
+| LUT3       |   39 |                 LUT |
+| FDCE       |   32 |        Flop & Latch |
+| LUT5       |   26 |                 LUT |
+| FDSE       |   20 |        Flop & Latch |
+| SRL16E     |    6 |  Distributed Memory |
+| BUFG       |    3 |               Clock |
+| RAMB18E1   |    2 |        Block Memory |
+| OBUF       |    1 |                  IO |
+| MMCME2_ADV |    1 |               Clock |
+| LDCE       |    1 |        Flop & Latch |
+| IBUFDS     |    1 |                  IO |
+| IBUF       |    1 |                  IO |
++------------+------+---------------------+
+
+
+9. Black Boxes
+--------------
+
++-----------+------+
+|  Ref Name | Used |
++-----------+------+
+| counter_1 |    1 |
+| counter_0 |    1 |
++-----------+------+
+
+
+10. Instantiated Netlists
+-------------------------
+
++------------------+------+
+|     Ref Name     | Used |
++------------------+------+
+| fifo_generator_0 |    2 |
+| clk_wiz_0        |    1 |
++------------------+------+
+
+
+# report_utilization -hierarchical -hierarchical_depth 2
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Fri May 27 21:56:05 2022
+| Host         : caslab-srv3 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_utilization -hierarchical -hierarchical_depth 2
+| Design       : async_fifo_loopback
+| Device       : 7a200tfbg676-3
+| Design State : Fully Placed
+------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------+--------------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+|         Instance        |                   Module                   | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP48 Blocks |
++-------------------------+--------------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+| async_fifo_loopback     |                                      (top) |        367 |        361 |       0 |    6 | 556 |      0 |      2 |            0 |
+|   (async_fifo_loopback) |                                      (top) |         43 |         43 |       0 |    0 |  71 |      0 |      0 |            0 |
+|   clk_wizard            |                                  clk_wiz_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|     inst                |                clk_wiz_0_clk_wiz_0_clk_wiz |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   counter_MMCM          |                                    counter |          1 |          1 |       0 |    0 |  32 |      0 |      0 |            0 |
+|   counter_RO            |                                  counter_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   counter_clock         |                                  counter_1 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |            0 |
+|   ring_oscillator_INST  |                            ring_oscillator |          3 |          3 |       0 |    0 |   1 |      0 |      0 |            0 |
+|   rx_async_fifo         |                           fifo_generator_0 |         75 |         72 |       0 |    3 | 161 |      0 |      1 |            0 |
+|     U0                  |     fifo_generator_0fifo_generator_v13_2_4 |         75 |         72 |       0 |    3 | 161 |      0 |      1 |            0 |
+|   rx_uart               |                                     rxuart |         92 |         92 |       0 |    0 |  85 |      0 |      0 |            0 |
+|   tx_async_fifo         |                       fifo_generator_0_HD5 |         74 |         71 |       0 |    3 | 161 |      0 |      1 |            0 |
+|     U0                  | fifo_generator_0fifo_generator_v13_2_4_HD6 |         74 |         71 |       0 |    3 | 161 |      0 |      1 |            0 |
+|   tx_uart               |                                     txuart |         79 |         79 |       0 |    0 |  45 |      0 |      0 |            0 |
++-------------------------+--------------------------------------------+------------+------------+---------+------+-----+--------+--------+--------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+
+# report_timing
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -3, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+WARNING: [Timing 38-164] This design has multiple clocks. Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Fri May 27 21:56:06 2022
+| Host         : caslab-srv3 running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_timing
+| Design       : async_fifo_loopback
+| Device       : 7a200t-fbg676
+| Speed File   : -3  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -0.288ns  (required time - arrival time)
+  Source:                 mmcm_counter_reset_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            counter_MMCM/count_reg_reg[24]/CLR
+                            (recovery check against rising-edge clock clk_out1_clk_wiz_0  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk_out1_clk_wiz_0 rise@5.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.842ns  (logic 0.341ns (40.499%)  route 0.501ns (59.501%))
+  Logic Levels:           0  
+  Clock Path Skew:        -3.594ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.352ns = ( 5.353 - 5.000 ) 
+    Source Clock Delay      (SCD):    3.946ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.625ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.293ns
+    Phase Error              (PE):    0.474ns
+  Clock Domain Crossing:  Inter clock paths are considered valid unless explicitly excluded by timing constraints such as set_clock_groups or set_false_path.
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+    R3                                                0.000     0.000 r  clk_p (IN)
+                         net (fo=0)                   0.000     0.000    clk_p
+    R3                   IBUFDS (Prop_ibufds_I_O)     0.807     0.807 r  IBUFDS_inst/O
+                         net (fo=1, routed)           1.598     2.406    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.483 r  clk_BUFG_inst/O
+                         net (fo=355, routed)         1.464     3.946    clk_BUFG
+    SLICE_X9Y72          FDRE                                         r  mmcm_counter_reset_reg/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y72          FDRE (Prop_fdre_C_Q)         0.341     4.287 f  mmcm_counter_reset_reg/Q
+                         net (fo=32, routed)          0.501     4.788    counter_MMCM/clear
+    SLICE_X8Y76          FDCE                                         f  counter_MMCM/count_reg_reg[24]/CLR
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_wiz_0 rise edge)
+                                                      5.000     5.000 r  
+    SLICE_X162Y15        LUT1                         0.000     5.000 r  ring_oscillator_INST/ro_stages[1].ro_buf/O
+                         net (fo=2, routed)           0.518     5.518    clk_wizard/inst/clk_in1
+    MMCME2_ADV_X1Y0      MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -3.558     1.961 r  clk_wizard/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.962     3.922    clk_wizard/inst/clk_out1_clk_wiz_0
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.072     3.994 r  clk_wizard/inst/clkout1_buf/O
+                         net (fo=210, routed)         1.359     5.353    counter_MMCM/clk_out1
+    SLICE_X8Y76          FDCE                                         r  counter_MMCM/count_reg_reg[24]/C
+                         clock pessimism              0.000     5.353    
+                         clock uncertainty           -0.625     4.727    
+    SLICE_X8Y76          FDCE (Recov_fdce_C_CLR)     -0.227     4.500    counter_MMCM/count_reg_reg[24]
+  -------------------------------------------------------------------
+                         required time                          4.500    
+                         arrival time                          -4.788    
+  -------------------------------------------------------------------
+                         slack                                 -0.288    
+
+
+
+
+# report_power
+Command: report_power
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date             : Fri May 27 21:56:07 2022
+| Host             : caslab-srv3 running 64-bit Ubuntu 18.04.6 LTS
+| Command          : report_power
+| Design           : async_fifo_loopback
+| Device           : xc7a200tfbg676-3
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 0.265        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.134        |
+| Device Static (W)        | 0.131        |
+| Effective TJA (C/W)      | 1.9          |
+| Max Ambient (C)          | 99.5         |
+| Junction Temperature (C) | 25.5         |
+| Confidence Level         | Medium       |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.009 |        6 |       --- |             --- |
+| Slice Logic             |     0.002 |     1141 |       --- |             --- |
+|   LUT as Logic          |     0.002 |      361 |    133800 |            0.27 |
+|   CARRY4                |    <0.001 |       52 |     33450 |            0.16 |
+|   Register              |    <0.001 |      556 |    267600 |            0.21 |
+|   Others                |     0.000 |       85 |       --- |             --- |
+|   LUT as Shift Register |     0.000 |        6 |     46200 |            0.01 |
+| Signals                 |     0.004 |      818 |       --- |             --- |
+| Block RAM               |     0.001 |        1 |       365 |            0.27 |
+| MMCM                    |     0.115 |        1 |        10 |           10.00 |
+| I/O                     |     0.003 |        4 |       400 |            1.00 |
+| Static Power            |     0.131 |          |           |                 |
+| Total                   |     0.265 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.048 |       0.017 |      0.030 |
+| Vccaux    |       1.800 |     0.095 |       0.065 |      0.031 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.005 |       0.000 |      0.005 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------------------------+------------------------------------+-----------------+
+| Clock                   | Domain                             | Constraint (ns) |
++-------------------------+------------------------------------+-----------------+
+| clk                     | clk_p                              |             5.0 |
+| clk_out1_clk_wiz_0      | clk_wizard/inst/clk_out1_clk_wiz_0 |             5.0 |
+| clk_wizard/inst/clk_in1 | ring_oscillator_INST/ro_wire[3]    |             6.1 |
+| clkfbout_clk_wiz_0      | clk_wizard/inst/clkfbout_clk_wiz_0 |            66.7 |
++-------------------------+------------------------------------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++---------------------+-----------+
+| Name                | Power (W) |
++---------------------+-----------+
+| async_fifo_loopback |     0.134 |
+|   clk_wizard        |     0.115 |
+|     inst            |     0.115 |
+|   counter_MMCM      |     0.003 |
+|   rx_async_fifo     |     0.004 |
+|     U0              |     0.004 |
+|       inst_fifo_gen |     0.004 |
+|   rx_uart           |     0.002 |
+|   tx_async_fifo     |     0.003 |
+|     U0              |     0.003 |
+|       inst_fifo_gen |     0.003 |
+|   tx_uart           |     0.002 |
++---------------------+-----------+
+
+
+0 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+# puts "Writing DCP"
+Writing DCP
+# write_checkpoint -force ../build/${board}/synth_system.dcp
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2975.836 ; gain = 0.000 ; free physical = 151570 ; free virtual = 180220
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2975.836 ; gain = 0.000 ; free physical = 151566 ; free virtual = 180219
+INFO: [Common 17-1381] The checkpoint '/home/anthony/fpga-phantom-circuits/src/async_fifo/build/ac701/synth_system.dcp' has been generated.
+# puts "Writing bitstream"
+Writing bitstream
+# write_verilog -force ../build/${board}/synth_system.v
+# write_bitstream -force ../build/${board}/synth_system.bit
+Command: write_bitstream -force ../build/ac701/synth_system.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+WARNING: [DRC CFGBVS-1] Missing CFGBVS and CONFIG_VOLTAGE Design Properties: Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+WARNING: [DRC PDRC-153] Gated clock check: Net ring_oscillator_INST/ro_wire[3] is a gated clock net sourced by a combinational pin ring_oscillator_INST/ro_stages[1].ro_buf/O, cell ring_oscillator_INST/ro_stages[1].ro_buf. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC RTSTAT-10] No routable loads: 65 net(s) have no routable loads. The problem bus(es) and/or net(s) are clock_counter_count[31:0], tx_async_fifo/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, and ro_counter_count[31:0].
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 3 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ../build/ac701/synth_system.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/anthony/fpga-phantom-circuits/src/async_fifo/Vivado/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Fri May 27 21:59:28 2022. For additional details about this file, please refer to the WebTalk help file at /tools/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:19 ; elapsed = 00:03:21 . Memory (MB): peak = 3298.832 ; gain = 322.996 ; free physical = 151457 ; free virtual = 180118
+# puts "Done synthesizing"
+Done synthesizing
+INFO: [Common 17-206] Exiting Vivado at Fri May 27 21:59:28 2022...
+Building async_fifo design for board ac701...
+Setting up build directory...
+Building actual design...
+Done.

@@ -1,0 +1,19 @@
+{
+    "trig_bit": 21,
+    "measurements": 1500,
+    "repetitions": 1,
+    "mask": 255,
+    "pattern": [
+        0,
+        1,
+        1,
+        0
+    ],
+    "outdir": "measurements/gpu/1/",
+    "cpu_cores": -1,
+    "sleep": 3,
+    "transmitter_mask": 65535,
+    "trans_trig_bit": null,
+    "sleep_time": 5,
+    "heater_no": 8
+}

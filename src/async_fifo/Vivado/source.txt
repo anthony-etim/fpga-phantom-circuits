@@ -1,0 +1,9 @@
+../../util/clog2.v
+../../uart/txuart.v
+../../uart/rxuart.v
+../../counter/counter.sv
+./defines.sv
+../../receiver/ro_defines.sv
+../../receiver/ring_oscillator.sv
+../verilog/async_fifo_loopback.v
+../../comparator/comparator.sv

@@ -1,0 +1,3 @@
+../../util/mem_dual_xilinx.v
+../counter.sv
+../tb_counter.sv

@@ -1,0 +1,38 @@
+{
+    "ac701": {
+        "partname": "xc7a200tfbg676",
+        "device": "xc7a200t",
+        "xdcfile": "../boards/ac701/ac701_rev2.0.xdc",
+        "input_clk_freq_mhz": "200"
+    },
+    "kc705": {
+        "partname": "xc7k325tffg900",
+        "device": "xc7k325t",
+        "xdcfile": "../boards/kc705/kc705_rev1.2.xdc",
+        "input_clk_freq_mhz": "200"
+    },
+    "kcu1500": {
+        "partname": "xcku115-flvb2104-2-e",
+        "device": "xcku115",
+        "xdcfile": "../boards/kcu1500/kcu1500.xdc",
+        "input_clk_freq_mhz": "300"
+    },
+    "u50": {
+        "partname": "xcu50-fsvh2104-2L-e",
+        "device": "xcu50",
+        "xdcfile": "../boards/u50/u50.xdc",
+        "input_clk_freq_mhz": "100"
+    },
+    "vcu118": {
+        "partname": "xcvu9p-flga2104-2L-e",
+        "device": "xcvu9p",
+        "xdcfile": "../boards/vcu118/vcu118_rev1.1.xdc",
+        "input_clk_freq_mhz": "300"
+    },
+    "vcu1525": {
+        "partname": "xcvu9p-fsgd2104-2L-e",
+        "device": "xcvu9p",
+        "xdcfile": "../boards/vcu1525/vcu1525_loopback_test.xdc",
+        "input_clk_freq_mhz": "300"
+    }
+}

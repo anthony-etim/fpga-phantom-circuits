@@ -1,0 +1,4 @@
+*.log
+output.rpt
+.Xil/
+*.v

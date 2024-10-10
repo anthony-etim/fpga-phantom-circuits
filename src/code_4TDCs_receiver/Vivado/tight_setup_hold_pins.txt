@@ -1,0 +1,14 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|                      clk |     clk_out_50_clk_wiz_0 |                                                          GEN_TDC[3].tdc_inst/u_trng_core/counter_reg[2]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                          GEN_TDC[0].tdc_inst/u_trng_core/counter_reg[2]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                          GEN_TDC[2].tdc_inst/u_trng_core/counter_reg[2]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                          GEN_TDC[1].tdc_inst/u_trng_core/counter_reg[2]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                                                      in32counter_reg[0]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                                                     out32counter_reg[2]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                                                     out32counter_reg[1]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                                                     out32counter_reg[0]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                                                      in32counter_reg[2]/D|
+|                      clk |     clk_out_50_clk_wiz_0 |                                                                                      in32counter_reg[1]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

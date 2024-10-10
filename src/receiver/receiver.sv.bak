@@ -1,0 +1,157 @@
+`include "ro_defines.sv"
+
+module receiver #(parameter CLOCKS_PER_BIT = 10,
+                  parameter BIT_SIZE = 8,
+		          parameter RO_TYPE = `RO_LATCH,
+		          parameter STAGES = 5)
+    (
+        input wire receive, 
+        input wire clock,
+        input wire reset,
+        input wire enable,
+        input wire dataFromTx,
+        output wire [BIT_SIZE-1:0] data,
+        output wire gotData
+    );
+
+reg [2:0] state;
+reg [BIT_SIZE-1:0] rxData  = 0;
+reg [`CLOG2(CLOCKS_PER_BIT):0] clk_count = 0;
+reg [`CLOG2(BIT_SIZE):0] index = 0;
+reg [0:0] rx_Done   = 0;
+reg [0:0] rx_Active = 0;
+reg [0:0] enableMyR0 = 0;
+reg [0:0] gotData_reg= 0;
+reg [`CLOG2(CLOCKS_PER_BIT):0] ro_count = 0;
+wire [`CLOG2(CLOCKS_PER_BIT):0] counter_count = 0;
+
+wire myROOutput;
+reg[0:0] counter_reset = 0;
+reg[0:0] counter_enable = 0; // define a variable 
+reg[0:0] data_bit = 0;
+reg [BIT_SIZE-1:0] data_reg = 0;
+
+// assign counter_enable = (in) ? ro_out : 1'b1; // mux to select either ro_out or 1 as input 
+// define the switch signal
+// 1 is to select clock 
+assign data = data_reg;
+assign gotData = gotData_reg;
+
+localparam IDLE = 3'd0,
+           DELAY = 3'd1,
+           RECEIVE_BIT = 3'd2,
+           FINISH = 3'd3,// state machine
+           THRESHOLD = 10; // abritrary threshold
+
+counter #(
+    .BIT_SIZE(BIT_SIZE)
+) counter_INST(
+    //.in(ro_out),
+    .clock(clock),
+    //.is_dummy(xxx),
+    .reset(counter_reset),
+    .enable(counter_enable),
+    .count(counter_count)
+);
+
+dummyRO #(
+    .RO_TYPE(RO_TYPE),
+    .STAGES(STAGES)
+) dummyRO_INST(
+    .enable(enableMyR0),
+    .ro_out(myROOutput)
+);
+
+
+always @(posedge clock) begin
+    if (reset== 1'b1) 
+        begin
+        state     <= IDLE;
+        rxData    <= 0;
+        clk_count <= 0;
+        index     <= 0;
+        rx_Done   <= 0;
+        rx_Active <= 0;
+        gotData_reg <= 0;
+        end 
+    else 
+        begin
+            case (state)
+            IDLE: 
+                begin
+                    index <= 0;
+                    data_reg <=0;
+                    gotData_reg <=0;
+                    // rx_wire <= 1'b0;// see previous assign
+                    clk_count <=0;
+                    // if (receive == 1)// the default 1 is 32-bit
+                    if (receive == 1'b1 && enable == 1'b1)// 1 binary bit of 1
+                        begin
+                            state <= RECEIVE_BIT;
+                        end
+                    else 
+                        state <= IDLE;
+                end
+            
+
+            DELAY: // measuring RO is in the delay stage
+                begin
+                    counter_enable <= 1'b1;
+                    if(clk_count < CLOCKS_PER_BIT-1)
+                        begin
+                            clk_count <= clk_count + 1;
+                            state <= DELAY;
+                        end
+                        else
+                            begin
+                                clk_count <= 0;
+                                if(enableMyR0 == 1)
+                                    begin
+                                        ro_count <= counter_count;
+                                    end
+                        if(ro_count < THRESHOLD)
+                            data_bit <= dataFromTx;
+                              else
+                                data_bit <= 1'b0;
+                                
+                                state <= RECEIVE_BIT;
+                                index <= index + 1;
+                            end
+                end
+
+            RECEIVE_BIT:
+                begin
+                    //data_reg <= {data_reg[BIT_SIZE-2:0], data_bit};
+                    data_reg <= {data_bit, data_reg[BIT_SIZE-1:1]};
+
+                    rx_Active <= 1'b1;
+                    enableMyR0 <= 1'b1;
+                    if (index == BIT_SIZE) 
+                        begin
+                        state = FINISH;
+                        end 
+                    else 
+                        begin
+                        state <= DELAY;
+                        end
+                    counter_reset <= 1;
+                end       
+                
+            FINISH:
+                begin
+                    rx_Done <= 1'b1;
+                    rx_Active <= 1'b0;
+                    enableMyR0 <= 1'b0;
+                    gotData_reg <= 1'b1;
+                    state <= IDLE;
+                end
+            
+            default: 
+                begin
+                state <= IDLE;
+                end
+        endcase
+    end
+end
+
+endmodule

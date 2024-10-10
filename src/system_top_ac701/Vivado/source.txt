@@ -1,0 +1,17 @@
+../../util/clog2.v
+../../uart/txuart.v
+../../uart/rxuart.v
+../../util/mem_dual.sv
+../../fifo_mem/fifo_mem.sv
+../../counter/counter.sv
+./defines.sv
+../../ro_crosstalk_phantom_sameLongWire_ac701/verilog/ro_defines.sv
+../../ro_crosstalk_phantom_sameLongWire_ac701/verilog/ring_oscillator.sv
+../../ro_crosstalk_phantom_sameLongWire_ac701/verilog/roSensor.sv
+../../powerWaster/verilog/heater.sv
+../../powerWaster/verilog/ro_heater.sv
+../../ro_crosstalk_phantom_sameLongWire_ac701/verilog/simple_transmitter.sv
+../../ro_crosstalk_phantom_sameLongWire_ac701/verilog/phantum.sv
+../verilog/address.sv
+../verilog/phantom_circuits_top.sv
+../../ro_clock/verilog/ro_clock.sv

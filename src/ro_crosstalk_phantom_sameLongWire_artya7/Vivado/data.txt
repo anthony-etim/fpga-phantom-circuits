@@ -1,0 +1,30 @@
+Set TX wire as 0
+3474455
+3815088
+Set TX wire as 1
+3474659
+3815354
+Set TX wire as 0
+3474511
+3815588
+Set TX wire as 1
+3474786
+3815125
+Set TX wire as 0
+3474870
+3815362
+Set TX wire as 1
+3474310
+3815210
+Set TX wire as 0
+3474290
+3815862
+Set TX wire as 1
+3475112
+3816123
+Set TX wire as 0
+3474181
+3814889
+Set TX wire as 1
+3474837
+3815230

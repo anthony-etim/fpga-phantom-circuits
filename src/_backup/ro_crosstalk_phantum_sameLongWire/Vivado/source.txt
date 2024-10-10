@@ -1,0 +1,14 @@
+../../util/clog2.v
+../../uart/txuart.v
+../../uart/rxuart.v
+../../util/mem_dual_xilinx.v
+../../fifo_mem/fifo_mem.v
+../../counter/counter.sv
+./defines.sv
+../verilog/address.sv
+../verilog/ro_defines.sv
+../verilog/ring_oscillator.sv
+../verilog/roSensor.sv
+../verilog/simple_transmitter.sv
+../verilog/phantum.sv
+../verilog/phantom_circuits_top.sv
